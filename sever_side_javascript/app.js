@@ -5,6 +5,27 @@ app.use(express.static('public')); // setting a directory where all the static f
 app.set('view engine', 'pug');     // specifying the engine
 app.set('views', './views');       // tradition that pug requires views dir
 
+app.get('/topic', (req, res)=>{    // /topic?id=
+	var topics = [                 // can be replaced by db
+		'Languages: ENG, KOR, and SPAN',
+		'Education: UBC',
+		'Work Experience: a lot',
+		'Extracurriculum: some',
+		'Volunteer: a few'
+	];
+	var output =`                   
+		<a href="/topic?id=0">Languages</a><br>
+		<a href="/topic?id=1">Education</a><br>
+		<a href="/topic?id=2">Work Experience</a><br>
+		<a href="/topic?id=3">Extracurriculum</a><br>
+		<a href="/topic?id=4">Volunteer</a><br>
+		${topics[req.query.id]}
+	`;
+
+	res.send(output);        // renders any number after /topic?id=
+})
+
+
 app.get('/', (req, res) => {  // '/' == home  // through URL == get  // use function to displaty whatever I want to show
 	res.send('Hello David\'s home page <img src="/pic.png">');
 });
