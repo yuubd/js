@@ -4,3 +4,4 @@ function hello(name){
 hello('david');
 
 //uglifyjs pretty.js -o pretty.min.js -m // uglifies the file
+//

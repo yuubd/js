@@ -1,1 +1,2 @@
-note.txt
+uglifyjs pretty.js -o pretty.min.js -m // uglifies the file
+npm int 	// initiate the 

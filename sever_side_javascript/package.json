@@ -1,0 +1,24 @@
+{
+  "name": "sever_side_javascript",
+  "version": "1.0.0",
+  "description": "server side js tutorials",
+  "main": "webserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuubd/js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuubd/js/issues"
+  },
+  "homepage": "https://github.com/yuubd/js#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "underscore": "^1.8.3"
+  }
+}
