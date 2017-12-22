@@ -1,10 +1,12 @@
-html
-	head
-		title= title
-	body
-		h1= message
-		ul 
+extends form.pug
+
+block num1
+	h1= message
+	h2= message2
+	ul 
 		-for(var i=0; i<5; i++)
 				li coding
 		div= time 
-			
+	script
+		
+		
