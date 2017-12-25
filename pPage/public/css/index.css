@@ -1,17 +1,97 @@
 #profile{
-	width:180px;
+	width:200px;
 }
 
 #sideMenu{
-	padding: 4px;
-	width: 250px;
+	padding: 5px;
+	max-width: 225px;
+	min-width: 225px;
 	display: inline-block;
+	border-right:1px solid #ffffff;
+	background-color: #3d3d3d;
+	color: #d1cfcf;
+}
+
+#contacts{
+	border-bottom: .5px solid #757575;
 }
 
 #contents{
-	width: 600px;
+	margin-left: 0px;
+	width: 800px;
 	display: inline-block;
 	vertical-align: top;
 	background-color: white;
+	position: relative;
 }
 
+a{
+	color: #d1cfcf;
+}
+a:link    {
+  text-decoration:  none;
+  font-weight:      lighter;
+  background-color: ;
+  color:            ;
+  } 
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      lighter;
+  background-color: ;
+  color:            #e8e8e8;
+  } 
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  none;
+  font-weight:      lighter;
+  background-color: ;
+  color: ;
+  } 
+
+{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+    display: flex;
+    overflow: hidden;
+    height: 900px;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+.left,
+.right{
+	overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;	
+}
+.left{
+	width:250px;
+}
+.right{
+	width:800px;
+}
+
+.left::-webkit-scrollbar{
+	display: always;
+}
+.right::-webkit-scrollbar {
+    display: none;
+}
