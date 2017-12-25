@@ -1,0 +1,17 @@
+#profile{
+	width:180px;
+}
+
+#sideMenu{
+	padding: 5px;
+	width: 250px;
+	display: inline-block;
+}
+
+#contents{
+	width: 600px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+}
+

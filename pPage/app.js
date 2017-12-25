@@ -14,7 +14,7 @@ app.set('views', './contents')
 
 
 app.get('/', (req, res)=>{
-	res.sendFile('test.html', {root: CONTENTS});
+	res.sendFile('index.html', {root: CONTENTS});
 	//var pic =`<img src="/pic.png" id="frontPic">`;
 	// //${topics[req.query.id]}
 	// res.send(intro +`<br>`+ output +`<br>`+ list);        // renders any number after /topic?id=
