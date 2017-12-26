@@ -10,18 +10,18 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div>
-  <div class="container" id="sideMenu" style="margin-left:5px;">
+<div class="container">
+  <div class="left" id="sideMenu">
     <div id="me" style="margin-left:0px;">
-      <h3><a href="/" title="goto main_page">Gwang Chul K.</a></h3>
+      <h3><a href="/" id="gck">Gwang Chul K.</a></h3>
       <img id="profile" src="img/logo.jpg"/>
-      <h4><a href="#about">About</a></h4>
+      <h4 id="aboutSM"><a href="#about">About</a></h4>
     </div>
     
     <div id="contacts">
       <ul>
         <li><a href="https://github.com/yuubd">GitHub Repository</a></li>
-        <li>gc.kim93@gmail.com</li>
+        <li style="font-weight: lighter;">gc.kim93@gmail.com</li>
         <li><a href="https://www.linkedin.com/in/gwangchul-kim">LinkedIn</a></li>
       </ul>
     </div>
@@ -66,11 +66,14 @@
         <ul>
           <li><a href="#heritage">Korean Heritage Festival</a></li>
           <li><a href="#mission">guatemala mission trips</a></li>
+          </br>
+          </br>
+          </br>
         </ul>
     </div>
   </div>
 
-  <div id="contents">
+  <div class="right" id="contents">
     
     <div id="about">
       <h2>About</h2>
@@ -177,11 +180,9 @@
         <p>Disinfected the neighborhood to terminate pests</p>
       </p>
     </div>  
-
-
   </div>
-
 </div>   
+<script type="text/javascript" src="javascript/index.js"></script>
 </body>
 </html>
 
