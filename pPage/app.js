@@ -1,4 +1,4 @@
-const port = 8080;
+const port = 8000;
 const path = require('path');     // need to pull in the built-in path module so that we can link to the file.
 const CONTENTS = path.join(__dirname, 'contents'); //always the directory in which the currently executing script resides
 var express = require('express');
