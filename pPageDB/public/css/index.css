@@ -2,6 +2,11 @@
 	width:200px;
 }
 
+#gck{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 #sideMenu{
 	padding: 5px;
 	max-width: 225px;
@@ -15,7 +20,7 @@
 
 #contacts{
 	border-bottom: .5px solid #757575;
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 #contents{
@@ -61,27 +66,40 @@ a:visited    {
 
 ul {
   list-style-type: none;
-  margin-left: 40px;
-  padding: 5px;
+  margin-left: 30px;
+  margin-top: 5px;
+  padding: 0px;
 }
 
-#topic1, 
-#topic2,
-#topic3,
-#topic4,
-#topic5,
+#topic,
 #aboutSM{
 	margin-left: 10px;
 }
 
-{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #cae8ca;
-  border: 2px solid #4CAF50;
+#aboutSM{
+	margin-bottom: 0px;
 }
+
+#bodyTopic{
+    margin-top: 30px;
+    margin-bottom: -0px;
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: -20px;       
+}
+
+h4{
+    margin-left: 5px;
+}
+
+p{
+    margin-bottom: -20px;
+    margin-top:  -10px;
+    margin-left: 10px;
+}
+
 
 .container {
     display: flex;
@@ -93,7 +111,7 @@ ul {
     width: 100%;
     backface-visibility: hidden;
     will-change: overflow;
-    margin-left:-15px;
+    margin-left:0px;
 }
 
 .left,

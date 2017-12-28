@@ -20,6 +20,6 @@ app.get('/', (req, res)=>{
 	// res.send(intro +`<br>`+ output +`<br>`+ list);        // renders any number after /topic?id=
 });
 
-app.get('/education', (req, res)=>{
-	res.sendFile('test.html', {root: CONTENTS});
+app.get('/backup', (req, res)=>{
+	res.sendFile('saved.html', {root: CONTENTS});
 });
