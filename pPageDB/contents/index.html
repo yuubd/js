@@ -27,12 +27,17 @@
         </div>
 <!–– make topic and subtopic lists with db ––>   
       <div id="sideBarWithDB">
-        <div id="topic"><a href="#education">Education</a>
-            <ul>
-                <li id="subtopic"><a href="#ubc">UBC</a></li>
-                <li id="subtopic"><a href="#ubc">VOG</a></li>
-            </ul>
-        </div>
+          <script>
+              var testVar = document.getElementById("sideBarWithDB");
+              var output = 
+              '<div id="topic"><a href="#education">Education</a>' +
+                '<ul>' +
+                    '<li id="subtopic"><a href="#ubc">UBC</a></li>' +
+                    '<li id="subtopic"><a href="#ubc">VOG</a></li>' +
+                '</ul>' 
+            '</div>';
+              testVar.innerHTML = output
+          </script>      
       </div>
 <!–– upto here ––>          
       <br>
@@ -49,10 +54,11 @@
 <!–– make bodyTopics and  and subtopic lists with db ––>       
       <div id="contentsWithDB"> 
 
-        <div id="bodyTopic">
-          <h3>Work Experience</h3>
-          <h4>CU (convenience store in korea)</h4>
-          <p>
+        <div id="bodytopic">
+          
+          <h3 id="mainbodytopic">Work Experience</h3>
+          <h4 id="subbodytopic">CU (convenience store in korea)</h4>
+          <p id="description">
             worked as a cashier, interacted with many different types of customers
           </p>
           <h4>Cloth factory</h4>
@@ -65,29 +71,15 @@
             Served one year as a CQ (charge of quarter) in Airforce squadron where CQs planned the flight training schedules for fighter pilots and organized many events for the squadron
             Served one year as an aide assistant for a general where I assisted organizing many events for the fighter wing.
           </p>
-          <h4>English Academy</h4>
-          <p>
-            worked as an assistant teacher for elementary students.
-          </p>
-          <h4>Angel in us and Illy</h4>
-          <p>
-            Worked as a barista 
-          </p>
-          <h4>Tasting Room</h4>
-          <p>
-            Worked as a waiter where things were well organized and dealt with heavy volume of customers
-          </p>
-          <h4>Uppercase</h4>
-          <p>
-            Working for cost of living and improve communication skills.
-          </p>
-          <h4>Teaching Assistant for cpsc 110 course in UBC</h4>
-          <p>
-            Will be attend in lectures, and labs to help students and assist instructors.
-          </p>
+          
         </div>
     </div>
-<!–– upto here ––>  
+<!–– upto here ––>
+      <form action="/admin/new" >
+            <p>
+                <input type="submit">
+            </p>
+        </form>
   </div>
 </div>
     <div id="thisOne">
