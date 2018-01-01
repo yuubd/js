@@ -28,12 +28,13 @@
 <!–– make topic and subtopic lists with db ––>   
       <div id="sideBarWithDB">
           <script>
+              var rr ='rrr'
               var testVar = document.getElementById("sideBarWithDB");
               var output = 
-              '<div id="topic"><a href="#education">Education</a>' +
+              `<div id="topic"><a href="#${topic}">${topic}</a>` +
                 '<ul>' +
-                    '<li id="subtopic"><a href="#ubc">UBC</a></li>' +
-                    '<li id="subtopic"><a href="#ubc">VOG</a></li>' +
+                  for each data in the collection
+                    '<li id="subtopic"><a href="#id=${side}">id=${side}</a></li>' +
                 '</ul>' 
             '</div>';
               testVar.innerHTML = output
@@ -54,24 +55,13 @@
 <!–– make bodyTopics and  and subtopic lists with db ––>       
       <div id="contentsWithDB"> 
 
-        <div id="bodytopic">
-          
-          <h3 id="mainbodytopic">Work Experience</h3>
-          <h4 id="subbodytopic">CU (convenience store in korea)</h4>
+        <div id=id=${topic}>
+          <h3 >${topic}</h3>
+            for each data in the collection == topic
+          <h4 id=${side}>${subtopic}</h4>
           <p id="description">
-            worked as a cashier, interacted with many different types of customers
+            ${description}
           </p>
-          <h4>Cloth factory</h4>
-          <p>
-            worked in various positions. Every position had different part of the cloth manufacturing process
-          </p>
-          <h4>Military service in south korea</h4>
-          <p>
-            Served as a sergeant in Republic of Korea Airforce
-            Served one year as a CQ (charge of quarter) in Airforce squadron where CQs planned the flight training schedules for fighter pilots and organized many events for the squadron
-            Served one year as an aide assistant for a general where I assisted organizing many events for the fighter wing.
-          </p>
-          
         </div>
     </div>
 <!–– upto here ––>

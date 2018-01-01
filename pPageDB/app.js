@@ -4,13 +4,6 @@ const CONTENTS = path.join(__dirname, 'contents'); //always the directory in whi
 var express = require('express');
 var app = express();
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: true}));
-
-var mongodb = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017/';
-
-app.use(express.static('public'));              // access to files
 app.listen(port, ()=>{
 	console.log(`Connected to ${port} port`);
 });
@@ -19,13 +12,28 @@ app.use(express.static('public'));
 app.set('view engine', 'html');
 app.set('views', './contents')
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
 
+var mongodb = require('mongodb').MongoClient;
+var url = 'mongodb://localhost:27017/';
+
+var fs = require('fs');
 app.get('/', (req, res)=>{
-    
-	res.sendFile('index.html', {root: CONTENTS});
-	//var pic =`<img src="/pic.png" id="frontPic">`;
-	// //${topics[req.query.id]}
-	// res.send(intro +`<br>`+ output +`<br>`+ list);        // renders any number after /topic?id=
+    mongodb.connect(url, (err, client)=>{
+        if(err) return console.log('error!');
+        var db = client.db('personalPagedb');
+        var cursor = db['Edu'].find();
+        fs.readFile( __dirname + '/index.html', 'utf8', (err, content)=>{
+            var result = content;
+            cursor.each((err,doc)=>{
+                if(err) return console.log('error!');
+                result += doc;
+            });
+        });
+    });
+    res.send(result);
+	//res.sendFile('index.html', {root: CONTENTS});
 });
 
 app.get('/admin/new', (req,res)=>{
